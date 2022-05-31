@@ -1,3 +1,12 @@
+const ua = navigator.userAgent;
+const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(ua);
+
+if (isMobile) {
+  document.querySelector("body").innerHTML = `
+        <p>Doesn't works on mobile phone for now. <br /> Try it out on a desktop. <p/> 
+    `;
+}
+
 const canvas = document.getElementById("canvas");
 const increaseBtn = document.getElementById("increase");
 const decreaseBtn = document.getElementById("decrease");
@@ -86,13 +95,3 @@ colorEl.addEventListener("change", (e) => {
 clearBtn.addEventListener("click", () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
-
-// function draw() {
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-//     drawCircle(x++, y++);
-
-//     requestAnimationFrame(draw);
-// }
-
-// draw();
