@@ -18,7 +18,7 @@ let y = undefined;
 
 function drawCircle(x, y) {
   ctx.beginPath();
-  ctx.arc(x, y, size, 2, Math.PI * 2);
+  ctx.arc(x, y, size, 0, Math.PI * 2);
   ctx.fillStyle = color;
   ctx.fill();
   // ctx.strokeStyle = color;
@@ -86,3 +86,13 @@ colorEl.addEventListener("change", (e) => {
 clearBtn.addEventListener("click", () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
+
+// function draw() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//     drawCircle(x++, y++);
+
+//     requestAnimationFrame(draw);
+// }
+
+// draw();
